@@ -1,0 +1,56 @@
+/* message.css – giao diện đồng bộ với login.jsp */
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #6a8dff, #8a5fff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.message-container {
+    background: #fff;
+    padding: 40px 50px;
+    border-radius: 16px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    text-align: center;
+    width: 380px;
+    animation: fadeIn 0.4s ease;
+}
+
+.message-container h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.message-text {
+    font-size: 16px;
+    color: #d63031;
+    font-weight: bold;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.back-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #6c5ce7;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.back-link:hover {
+    background-color: #5a4ad1;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

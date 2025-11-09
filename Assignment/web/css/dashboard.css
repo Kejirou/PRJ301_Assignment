@@ -1,0 +1,348 @@
+/* 🌟 Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background: #f6f7fb;
+    color: #333;
+    display: flex;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* 🟣 Sidebar */
+.sidebar {
+    width: 240px;
+    background: linear-gradient(180deg, #4b2cc3 0%, #673ab7 100%);
+    color: white;
+    min-height: 100vh;
+    padding: 25px 0;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 0;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+}
+
+.sidebar .logo {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.sidebar .logo img {
+    width: 65px;
+    transition: transform 0.3s;
+}
+
+.sidebar .logo img:hover {
+    transform: scale(1.1);
+}
+
+.sidebar .logo h2 {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.sidebar .menu {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar .menu li {
+    margin: 15px 0;
+}
+
+.sidebar .menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 25px;
+    display: block;
+    transition: 0.3s;
+    border-left: 4px solid transparent;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.sidebar .menu a:hover,
+.sidebar .menu a.active {
+    background: rgba(255, 255, 255, 0.2);
+    border-left: 4px solid #fff;
+    transform: translateX(4px);
+}
+
+/* 🌤️ Main content */
+.main {
+    margin-left: 240px;
+    width: calc(100% - 240px);
+    transition: margin-left 0.3s ease;
+}
+
+/* 🔵 Top bar */
+.topbar {
+    background: #fff;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 99;
+}
+
+.page-title {
+    font-weight: 700;
+    font-size: 20px;
+    color: #4b2cc3;
+    letter-spacing: 0.5px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logout-btn {
+    background: linear-gradient(135deg, #ff7043, #e64a19);
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+.logout-btn:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #ff8a65, #f4511e);
+}
+
+/* 🧩 Cards & content */
+.content {
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+    transition: all 0.3s ease;
+}
+
+.card {
+    background: white;
+    padding: 22px 26px;
+    border-radius: 14px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.card.gradient {
+    background: linear-gradient(135deg, #7b5eff, #59d3ff);
+    color: white;
+    box-shadow: 0 4px 18px rgba(91, 58, 255, 0.25);
+}
+
+.card.gradient h3 {
+    color: #fff;
+    font-weight: 600;
+}
+
+.card.gradient p {
+    opacity: 0.95;
+}
+
+.card.gradient a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* 📋 Table styling */
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    background-color: #fff;
+}
+
+.styled-table th, .styled-table td {
+    padding: 14px 16px;
+    text-align: left;
+    font-size: 15px;
+}
+
+.styled-table thead {
+    background: linear-gradient(135deg, #4b2cc3, #7b5eff);
+    color: #fff;
+    font-weight: 600;
+}
+
+.styled-table tr:nth-child(even) {
+    background-color: #f8f8ff;
+}
+
+.styled-table tr:hover {
+    background-color: #f0f0ff;
+    transition: 0.2s;
+}
+
+/* 🏷️ Status badges */
+.badge {
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 0.85em;
+    font-weight: 600;
+    display: inline-block;
+    text-transform: capitalize;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.badge.yellow { background-color: #fbc02d; }
+.badge.green { background-color: #43a047; }
+.badge.red { background-color: #e53935; }
+
+/* ✅ Buttons */
+.approve-btn, .reject-btn {
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+    font-weight: 500;
+    transition: 0.3s;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.approve-btn { background: linear-gradient(135deg, #43a047, #66bb6a); }
+.reject-btn { background: linear-gradient(135deg, #e53935, #ef5350); }
+
+.approve-btn:hover { transform: scale(1.05); background: linear-gradient(135deg, #388e3c, #4caf50); }
+.reject-btn:hover { transform: scale(1.05); background: linear-gradient(135deg, #d32f2f, #e57373); }
+
+/* 💬 Text styling inside info cards */
+.card.info h3 {
+    color: #4b2cc3;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card.info p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* 📱 Responsive */
+@media (max-width: 900px) {
+    .sidebar {
+        width: 200px;
+    }
+    .main {
+        margin-left: 200px;
+    }
+}
+
+@media (max-width: 700px) {
+    body {
+        flex-direction: column;
+    }
+    .sidebar {
+        position: relative;
+        width: 100%;
+        min-height: auto;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .main {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+/* 🎨 Table Card */
+.table-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    overflow-x: auto;
+}
+
+/* 🩵 Fix text color trong gradient card */
+.card.gradient h3,
+.card.gradient p {
+    color: #fff;
+}
+
+/* 🔲 Fix bảng không tràn viền */
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    color: #333;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Header rõ ràng hơn */
+.styled-table thead {
+    background: #4b2cc3;
+    color: #fff;
+}
+
+.styled-table th {
+    font-weight: 600;
+    padding: 12px 14px;
+    font-size: 15px;
+    text-transform: capitalize;
+}
+
+/* Dòng dữ liệu */
+.styled-table td {
+    padding: 12px 14px;
+    font-size: 14px;
+}
+
+.styled-table tr:nth-child(even) {
+    background-color: #f9f9ff;
+}
+
+/* Hover row nhẹ */
+.styled-table tbody tr:hover {
+    background-color: #f0f0ff;
+    transition: 0.2s ease;
+}
+
+/* Badge nổi bật hơn */
+.badge {
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 5px 10px;
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Responsive fix */
+@media (max-width: 768px) {
+    .table-card {
+        padding: 15px;
+    }
+    .styled-table th, .styled-table td {
+        padding: 10px 8px;
+        font-size: 13px;
+    }
+}
